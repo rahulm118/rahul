@@ -1,0 +1,37 @@
+hostnamectl set-hostname slave
+
+
+
+    2 adduser slave
+    3  passwd slave
+    4  visudo
+    5  vi /etc/ssh/sshd_config
+    6  service sshd restart
+    7  su - slave
+
+
+
+312  ssh-keygen
+  313  ssh-copy-id slave@172.31.94.143
+  314  ls
+  315  touch f1
+  316  ls
+  317  cp f1 test
+  318  scp f1 slave@172.31.94.143:
+  319  clear
+  320  touch f2
+  321  ls
+  322  scp f2 slave@172.31.94.143:
+  323  touch f3
+  324  scp f3 slave@172.31.94.143:
+  325  touch f4
+  326  scp f4 slave@172.31.94.143:
+  327  ssh slave@172.31.94.143
+  328  ls
+  329  touch f5
+  330  ls
+  331  scp f5 slave@172.31.94.143:
+  332  ls
+  333  ssh slave@172.31.94.143:
+  334  ssh slave@172.31.94.143
+  335  history
